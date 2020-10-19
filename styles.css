@@ -10,7 +10,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color:rgb(173, 173, 245);
+    background-color:#f2f2f2;
 }
 
 .tooltip {
@@ -55,7 +55,7 @@ body{
     border-radius: 10px;
     height: 40px;
     min-width: 60vw;
-    border-color: blueviolet;
+    border-color: #e1e1e1;
     text-align: center;
 }
 
@@ -63,6 +63,6 @@ body{
     border-radius: 10px;
     height: 40px;
     min-width: 40vw;
-    background-color:rgb(204, 204, 243);
-    border-color: blueviolet;
+    background-color:#d2d2d2;
+    border-color: #e1e1e1;
 }

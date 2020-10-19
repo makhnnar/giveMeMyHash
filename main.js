@@ -1,12 +1,18 @@
 (function(){
 
-    function changeToII(predicate){
-        return predicate.replace(
-            new RegExp('[a|A|e|E|o|O|u|U]', 'g'),
-            'i'
-        );
-        //dame un sha1 y te retorno un hashKey
-        //return btoa(predicate.toLowerCase().split(':').map(hc => String.fromCharCode(parseInt(hc, 16))).join(''));
+    function changeToHashKey(predicate){
+        if(predicate&& predicate.length>0){
+            return btoa(
+                predicate.toLowerCase()
+                .split(':')
+                .map(
+                    hc => String.fromCharCode(
+                        parseInt(hc, 16)
+                    )
+                ).join('')
+            );
+        }
+        return "";
     }
 
     var input = document.getElementById('textToChange');
@@ -17,7 +23,7 @@
         'keyup', 
         function (e) {
             //console.log('Value:', changeToII(input.value));
-            document.getElementById('result').innerText = changeToII(input.value);
+            document.getElementById('result').innerText = changeToHashKey(input.value);
         }
     );
 
